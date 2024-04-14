@@ -71,7 +71,32 @@ cd Ipopt
 mkdir build
 cd build
 ../configure
+```
+
+检查如下信息
+
+```
+...
+checking for LAPACK... yes: generic module (lapack.pc blas.pc)
+checking for package ASL... yes
+checking for package Mumps... yes
+...
+checking for package HSL... yes
+checking for function ma27ad_ in -L/usr/local/lib -lcoinhsl   ... yes
+checking for function ma28ad_ in -L/usr/local/lib -lcoinhsl   ... yes
+...
+```
+
+继续完成编译
+
+```
 make 
-make test //可以验证编译是否成功
+make test         #可以验证编译是否成功
 sudo make install
+```
+
+最后去到/usr/local/include目录
+
+```
+sudo cp coin-or coin -r         #把文件夹改名要不会找不到头文件
 ```
