@@ -41,10 +41,12 @@ cd ..
 
 ### 5. 安装HSL(Harwell Subroutines Library)
 
+官网https://licences.stfc.ac.uk/product/coin-hsl
+
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
 cd ThirdParty-HSL
-在官网https://licences.stfc.ac.uk/product/coin-hsl下载免费的MA27版本(Coin-HSL Archive)，压缩包解压并重命名为coinhsl，放到ThirdParty-HSL目录下(ThirdParty-HSL/coinhsl)
+在官网下载免费的MA27版本(Coin-HSL Archive)，压缩包解压并重命名为coinhsl，放到ThirdParty-HSL目录下(ThirdParty-HSL/coinhsl)
 ./configure
 make
 sudo make install
@@ -100,3 +102,21 @@ sudo make install
 ```
 sudo cp coin-or coin -r         #把文件夹改名要不会找不到头文件
 ```
+
+## 二、安装CasADi
+
+官网https://github.com/casadi/casadi/wiki/InstallationLinux
+教程https://blog.csdn.net/shiquan0914/article/details/130521274
+教程https://blog.csdn.net/asd22222984565/article/details/134043389
+
+```
+git clone https://github.com/casadi/casadi.git
+cd casadi
+mkdir build
+cd build
+cmake .. -DWITH_IPOPT=ON         #这里不要使用官网教程，会报错
+cmake .. -DCMAKE_BUILD_TYPE=RELEASE
+make
+sudo make install
+```
+
