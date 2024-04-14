@@ -1,2 +1,3 @@
-# Installation-of-Ipopt-and-CasADi
-Installation of Ipopt and CasADi
+# Ipopt和CasADi安装配置
+基于Ubuntu20.04.6LTS
+---
