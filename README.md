@@ -106,7 +106,9 @@ sudo cp coin-or coin -r         #把文件夹改名要不会找不到头文件
 ## 二、安装CasADi
 
 官网https://github.com/casadi/casadi/wiki/InstallationLinux
+
 教程https://blog.csdn.net/shiquan0914/article/details/130521274
+
 教程https://blog.csdn.net/asd22222984565/article/details/134043389
 
 ```
