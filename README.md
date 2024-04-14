@@ -41,8 +41,37 @@ cd ..
 
 ### 5. 安装HSL(Harwell Subroutines Library)
 
+```
+git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
+cd ThirdParty-HSL
+在官网https://licences.stfc.ac.uk/product/coin-hsl下载免费的MA27版本(Coin-HSL Archive)，压缩包解压并重命名为coinhsl，放到ThirdParty-HSL目录下(ThirdParty-HSL/coinhsl)
+./configure
+make
+sudo make install
+cd ..
+```
 
+### 6. 安装MUMPS Linear Solver 
 
+```
+git clone https://github.com/coin-or-tools/ThirdParty-Mumps.git
+cd ThirdParty-Mumps
+./get.Mumps
+./configure
+make
+sudo make install
+cd ..
+```
 
+### 7. 安装Ipopt
 
-
+```
+git clone https://github.com/coin-or/Ipopt.git
+cd Ipopt
+mkdir build
+cd build
+../configure
+make 
+make test //可以验证编译是否成功
+sudo make install
+```
