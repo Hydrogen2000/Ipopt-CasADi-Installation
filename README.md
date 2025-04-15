@@ -96,9 +96,9 @@ sudo cp coin-or coin -r         #文件夹改名否则会找不到头文件
 
 官网https://coin-or.github.io/Ipopt/INSTALL.html
 
-教程https://blog.csdn.net/asd22222984565/article/details/130794329
+https://blog.csdn.net/asd22222984565/article/details/130794329
 
-教程https://zhuanlan.zhihu.com/p/675009435?utm_id=0
+https://zhuanlan.zhihu.com/p/675009435?utm_id=0
 
 
 ## 二、安装CasADi
@@ -108,7 +108,7 @@ git clone https://github.com/casadi/casadi.git
 cd casadi
 mkdir build
 cd build
-cmake .. -DWITH_IPOPT=ON         #这里不要使用官网教程，会报错
+cmake .. -DWITH_IPOPT=ON         #不要使用官网教程，会报错
 cmake .. -DCMAKE_BUILD_TYPE=RELEASE
 make
 sudo make install
@@ -118,7 +118,7 @@ sudo make install
 
 官网https://github.com/casadi/casadi/wiki/InstallationLinux
 
-教程https://blog.csdn.net/shiquan0914/article/details/130521274
+https://blog.csdn.net/shiquan0914/article/details/130521274
 
-教程https://blog.csdn.net/asd22222984565/article/details/134043389
+https://blog.csdn.net/asd22222984565/article/details/134043389
 
