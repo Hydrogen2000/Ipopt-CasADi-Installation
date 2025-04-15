@@ -100,7 +100,6 @@ https://blog.csdn.net/asd22222984565/article/details/130794329
 
 https://zhuanlan.zhihu.com/p/675009435?utm_id=0
 
-
 ## 二、安装CasADi
 
 ```bash
@@ -122,3 +121,23 @@ https://blog.csdn.net/shiquan0914/article/details/130521274
 
 https://blog.csdn.net/asd22222984565/article/details/134043389
 
+## 三、引用CasADi
+
+引用头文件使用：
+```cpp
+#include <casadi/casadi.hpp>
+```
+
+编辑CMakeLists链接到共享库：
+```cmake
+link_directories(/usr/local/lib)
+target_link_libraries(${EXECUTABLE_NAME}
+  libcasadi.so.3.7
+)
+```
+或
+```cmake
+target_link_libraries(${EXECUTABLE_NAME}
+  /usr/local/lib/libcasadi.so.3.7
+)
+```
