@@ -32,7 +32,7 @@ cd ..
 
 官网：https://licences.stfc.ac.uk/product/coin-hsl
 
-```
+```bash
 git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
 cd ThirdParty-HSL
 # 压缩包解压并重命名为coinhsl，放到ThirdParty-HSL目录下 (ThirdParty-HSL/coinhsl)
@@ -44,7 +44,7 @@ cd ..
 
 ### 4. 安装MUMPS Linear Solver 
 
-```
+```bash
 git clone https://github.com/coin-or-tools/ThirdParty-Mumps.git
 cd ThirdParty-Mumps
 ./get.Mumps
@@ -88,7 +88,7 @@ sudo make install
 
 最后去到`/usr/local/include`目录：
 
-```
+```bash
 sudo cp coin-or coin -r         #文件夹改名否则会找不到头文件
 ```
 
@@ -103,13 +103,7 @@ sudo cp coin-or coin -r         #文件夹改名否则会找不到头文件
 
 ## 二、安装CasADi
 
-官网https://github.com/casadi/casadi/wiki/InstallationLinux
-
-教程https://blog.csdn.net/shiquan0914/article/details/130521274
-
-教程https://blog.csdn.net/asd22222984565/article/details/134043389
-
-```
+```bash
 git clone https://github.com/casadi/casadi.git
 cd casadi
 mkdir build
@@ -119,4 +113,12 @@ cmake .. -DCMAKE_BUILD_TYPE=RELEASE
 make
 sudo make install
 ```
+
+### 参考
+
+官网https://github.com/casadi/casadi/wiki/InstallationLinux
+
+教程https://blog.csdn.net/shiquan0914/article/details/130521274
+
+教程https://blog.csdn.net/asd22222984565/article/details/134043389
 
