@@ -28,12 +28,14 @@ cd ..
 
 ### 3. 安装HSL (Harwell Subroutines Library)
 
-前往官网https://licences.stfc.ac.uk/product/coin-hsl，下载
+求解器官网下载免费的MA27版本，点击Free to all的`Yes`，在HSL Archive Licence下点击`ORDER NOW`，按照引导填写信息，最后下载最新的zip archive压缩包文件即可。
+
+官网：https://licences.stfc.ac.uk/product/coin-hsl
 
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
 cd ThirdParty-HSL
-在官网下载免费的MA27版本(Coin-HSL Archive)，压缩包解压并重命名为coinhsl，放到ThirdParty-HSL目录下(ThirdParty-HSL/coinhsl)
+# 压缩包解压并重命名为coinhsl，放到ThirdParty-HSL目录下 (ThirdParty-HSL/coinhsl)
 ./configure
 make
 sudo make install
