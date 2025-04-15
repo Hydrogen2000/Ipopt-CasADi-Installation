@@ -2,24 +2,21 @@
 
 Ipopt、CasADi安装配置，基于Ubuntu20.04.6LTS
 
-## 1. 安装Ipopt
+## 一、安装Ipopt
 
-### 1> ipopt除了源码外还使用了一些其他的包，为了方便管理建议专门建立一个文件夹
+### 1. 创建文件夹进行包管理并安装依赖
 
-```
+```bash
 mkdir ipopt
 cd ipopt
-```
-
-### 2> 安装依赖
-
-```
 sudo apt install gcc g++ gfortran git patch wget pkg-config libblas-dev liblapack-dev libmetis-dev
 ```
 
-### 3> 安装ASL(Ampl Solver Library)
+一些帖子中提到的BLAS和LAPACK已经包含在liblapack-dev依赖中。
 
-```
+### 2. 安装ASL (Ampl Solver Library)
+
+```bash
 git clone https://github.com/coin-or-tools/ThirdParty-ASL.git
 cd ThirdParty-ASL
 ./get.ASL
@@ -29,15 +26,10 @@ sudo make install
 cd ..
 ```
 
-### 4> 安装BLAS和LAPACK
+### 3. 安装HSL (Harwell Subroutines Library)
 
+前往官网https://licences.stfc.ac.uk/product/coin-hsl，下载
 
-已经包含在liblapack-dev依赖中
-
-
-### 5> 安装HSL(Harwell Subroutines Library)
-
-官网https://licences.stfc.ac.uk/product/coin-hsl
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-HSL.git
 cd ThirdParty-HSL
@@ -48,7 +40,7 @@ sudo make install
 cd ..
 ```
 
-### 6> 安装MUMPS Linear Solver 
+### 4. 安装MUMPS Linear Solver 
 
 ```
 git clone https://github.com/coin-or-tools/ThirdParty-Mumps.git
@@ -60,9 +52,9 @@ sudo make install
 cd ..
 ```
 
-### 7> 安装Ipopt
+### 5. 安装Ipopt
 
-```
+```bash
 git clone https://github.com/coin-or/Ipopt.git
 cd Ipopt
 mkdir build
@@ -70,9 +62,9 @@ cd build
 ../configure
 ```
 
-检查如下信息
+检查如下信息：
 
-```
+```bash
 ...
 checking for LAPACK... yes: generic module (lapack.pc blas.pc)
 checking for package ASL... yes
@@ -84,18 +76,18 @@ checking for function ma28ad_ in -L/usr/local/lib -lcoinhsl   ... yes
 ...
 ```
 
-继续完成编译
+继续完成编译：
 
-```
+```bash
 make 
 make test         #可以验证编译是否成功
 sudo make install
 ```
 
-最后去到/usr/local/include目录
+最后去到`/usr/local/include`目录：
 
 ```
-sudo cp coin-or coin -r         #把文件夹改名要不会找不到头文件
+sudo cp coin-or coin -r         #文件夹改名否则会找不到头文件
 ```
 
 ### 参考
