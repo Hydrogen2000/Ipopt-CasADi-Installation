@@ -28,7 +28,7 @@ cd ..
 
 ### 3. 安装HSL (Harwell Subroutines Library)
 
-求解器官网下载免费的MA27版本，点击Free to all的`Yes`，在HSL Archive Licence下点击`ORDER NOW`，按照引导填写信息，最后下载最新的zip archive压缩包文件即可。
+求解器官网下载免费的MA27版本，点击Free to all的`Yes`，在HSL Archive Licence下点击`ORDER NOW`，按照引导填写信息，最后下载最新的zip archive压缩包文件即可。截止2025.4.15最新的压缩包已经上传到本工程。
 
 官网：https://licences.stfc.ac.uk/product/coin-hsl
 
