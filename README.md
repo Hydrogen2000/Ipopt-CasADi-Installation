@@ -1,6 +1,6 @@
 # Ipopt CasADi Installation
 
-Ipopt、CasADi安装配置，基于Ubuntu20.04.6LTS
+Ipopt、CasADi安装配置，基于Intel NUC i7-1165G7，操作系统Ubuntu20.04.6LTS
 
 ## 一、安装Ipopt
 
@@ -92,11 +92,20 @@ sudo make install
 sudo cp coin-or coin -r         #文件夹改名否则会找不到头文件
 ```
 
+在部分运算平台上，还需要链接以下的共享库才能够成功编译：
+```bash
+sudo ln -s /usr/local/lib/libcoinmumps.so.3 /usr/lib/libcoinmumps.so.3
+sudo ln -s /usr/local/lib/libcoinhsl.so.2 /usr/lib/libcoinhsl.so.2
+sudo ln -s /usr/local/lib/libipopt.so.3 /usr/lib/libipopt.so.3
+```
+
 ### 参考
 
 官网https://coin-or.github.io/Ipopt/INSTALL.html
 
 https://blog.csdn.net/asd22222984565/article/details/130794329
+
+https://blog.csdn.net/tianjunc/article/details/143319954
 
 https://zhuanlan.zhihu.com/p/675009435?utm_id=0
 
